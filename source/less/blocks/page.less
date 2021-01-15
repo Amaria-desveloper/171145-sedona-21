@@ -1,0 +1,25 @@
+.page__body {
+  margin: 0;
+  font-family: "ptsans", "Arial", sans-serif;
+  .font(14px; 24px);
+}
+
+.page__body-wrapper {
+  min-width: 320px;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page__body-wrapper {
+    min-width: 768px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__body-wrapper {
+    min-width: 1200px;
+    padding: 0 60px;
+  }
+}
