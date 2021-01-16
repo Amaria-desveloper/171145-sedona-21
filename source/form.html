@@ -88,30 +88,30 @@
           </div>
         </fieldset>
 
-        <fieldset class="feedback__fieldset">
+        <fieldset class="feedback__fieldset feedback__fieldset--impression">
           <div class="container">
-            <h2 class="feedback__title">Ваше общее впечатление:</h2>
+            <h2 class="feedback__title title">Ваше общее впечатление:</h2>
 
             <label class="feedback__label">
-              <input class="feedback__field" name="impression" value="positive" type="radio" checked>
+              <input class="feedback__field feedback__field--hidden" name="impression" value="positive" type="radio" checked>
               <span class="feedback__label-text">Скорее положительное</span>
             </label>
 
             <label class="feedback__label">
-              <input class="feedback__field" name="impression" value="negative" type="radio">
+              <input class="feedback__field feedback__field--hidden" name="impression" value="negative" type="radio">
               <span class="feedback__label-text">Скорее отрицательное</span>
             </label>
 
             <label class="feedback__label">
-              <input class="feedback__field" name="impression" value="unsure" type="radio">
+              <input class="feedback__field feedback__field--hidden" name="impression" value="unsure" type="radio">
               <span class="feedback__label-text">Затрудняюсь ответить</span>
             </label>
           </div>
         </fieldset>
 
-        <fieldset class="feedback__fieldset">
+        <fieldset class="feedback__fieldset feedback__fieldset--sights">
           <div class="container">
-            <h2 class="feedback__title">Посещенные достопримечательности:</h2>
+            <h2 class="feedback__title title">Посещенные достопримечательности:</h2>
 
             <label class="feedback__label">
               <input class="feedback__field" name="sight" value="Devils Bridge" type="checkbox" checked>
@@ -135,15 +135,17 @@
           </div>
         </fieldset>
 
-        <fieldset class="feedback__fieldset">
+        <fieldset class="feedback__fieldset feedback__fieldset--feedback">
           <div class="container">
-            <h2 class="feedback__title">Опишите свои эмоции:</h2>
-            <textarea class="feedback__field feedback__field--fieldset" name="feedback"
+            <h2 class="feedback__title title">Опишите свои эмоции:</h2>
+            <textarea class="feedback__field feedback__field--textarea" name="feedback"
               placeholder="Опишите подробно все свои эмоции"></textarea>
           </div>
         </fieldset>
 
-        <button class="feedback__submit" type="submit">Отправить отзыв</button>
+        <div class="container">
+          <button class="feedback__submit" type="submit">Отправить отзыв</button>
+        </div>
       </form>
     </main>
 
