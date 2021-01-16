@@ -1,0 +1,75 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback__fieldset {
+  margin: 0;
+  padding: 20px 0 25px;
+
+  border: none;
+  border-top: 1px solid @lighter-grey;
+
+  & > .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.feedback__fieldset.feedback__fieldset--contacts {
+  & .feedback__label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  & .feedback__field {
+    width: 100%;
+  }
+}
+
+.feedback__title {
+  margin: 0 0 19px;
+}
+
+.feedback__label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.feedback__label-text {
+  vertical-align: middle;
+  padding-right: 14px;
+
+  .font(14px; 26px; 400);
+  text-transform: uppercase;
+}
+
+.feedback__field {
+  height: 58px;
+  padding: 18px 22px 14px;
+
+  font-family: inherit;
+  .font(18px; 26px; 700);
+  color: @basic-black;
+
+  border: none;
+  background-color: @grey;
+
+  &::placeholder {
+    color: @basic-black;
+  }
+
+  &--name {
+    max-width: 230px;
+  }
+
+  &--surname {
+    max-width: 192px;
+  }
+
+  &--patronymic {
+    max-width: 194px;
+    margin-left: 10px;
+  }
+}
