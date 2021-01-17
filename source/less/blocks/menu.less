@@ -1,5 +1,4 @@
 .menu {
-  margin: 0 -18px;
   background-color: @primary-blue;
 }
 
@@ -13,7 +12,6 @@
 .menu__item {
   display: flex;
   width: 100%;
-  //height: 55px;
   justify-content: center;
   align-items: center;
 
@@ -31,4 +29,36 @@
 
   .font(18px; 55px; 700);
   color: @basic-white;
+}
+
+
+@media (min-width: @tablet-width) {
+  .menu {
+    background-color: @basic-white;
+  }
+
+  .menu__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu__item {
+    width: 153px;
+    height: 56px;
+
+    border: none;
+
+    &:last-child {
+      box-shadow: none;
+    }
+
+    &--right-gap {
+      margin-right: 158px;
+    }
+  }
+
+  .menu__link {
+    .font(14px; 26px; 700);
+    color: @basic-black;
+  }
 }
