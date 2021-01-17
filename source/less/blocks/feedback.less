@@ -1,0 +1,164 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback__fieldset {
+  margin: 0;
+  padding: 20px 0 25px;
+
+  border: none;
+  border-top: 1px solid @lighter-grey;
+
+  & > .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.feedback__title {
+  margin: 0 0 19px;
+}
+
+.feedback__label {
+  display: flex;
+  align-items: center;
+  width: 280px;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.feedback__label-text {
+  vertical-align: middle;
+  padding-right: 14px;
+
+  .font(14px; 26px; 400);
+  text-transform: uppercase;
+}
+
+.feedback__field {
+  height: 58px;
+  padding: 18px 22px 14px;
+
+  font-family: inherit;
+  .font(18px; 26px; 700);
+  color: @basic-black;
+
+  border: none;
+  background-color: @grey;
+
+  &::placeholder {
+    color: @basic-black;
+  }
+
+  &--name {
+    max-width: 230px;
+  }
+
+  &--surname {
+    max-width: 192px;
+  }
+
+  &--patronymic {
+    max-width: 194px;
+    margin-left: 10px;
+  }
+
+  &--hidden {
+    .visually-hidden();
+  }
+
+  &--textarea {
+    width: 280px;
+    height: 160px;
+
+    resize: none;
+  }
+}
+
+.feedback__fieldset--contacts {
+  & .feedback__label {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  & .feedback__label-text {
+    margin-bottom: 8px;
+    padding-left: 22px;
+  }
+
+  & .feedback__field {
+    width: 100%;
+  }
+}
+
+.feedback__fieldset--impression {
+  & .feedback__label {
+    width: 100%;
+    height: 56px;
+    margin-bottom: 13px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  & .feedback__label-text {
+    padding-left: 78px;
+
+    text-transform: none;
+    .font (18px; 26px; 700);
+  }
+}
+
+.feedback__fieldset--sights {
+  & .feedback__field {
+    .visually-hidden();
+  }
+
+  & .feedback__label {
+    width: 100%;
+    height: 56px;
+    margin-bottom: 13px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  & .feedback__label-text {
+    padding-left: 78px;
+
+    text-transform: none;
+    .font (18px; 26px; 700);
+  }
+}
+
+.feedback__fieldset--feedback {
+  margin-bottom: 51px;
+  padding-bottom: 0;
+}
+
+.feedback__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 58px;
+
+  text-transform: uppercase;
+  font-family: "ptsans", "Arial", sans-serif;
+  .font(21px; 26px; 700);
+  color: @basic-white;
+
+  border: none;
+  background-color: @primary-blue;
+}
