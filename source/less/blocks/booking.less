@@ -1,3 +1,7 @@
+.booking {
+  background-color: @basic-white;
+}
+
 .booking__headline {
   display: flex;
   flex-direction: column;
@@ -30,4 +34,29 @@
   text-decoration: none;
 
   background-color: @primary-blue;
+
+  &:hover {
+    background-color: @primary-darkblue;
+  }
+
+  &:active {
+    color: @special-white-3;
+    background-color: @primary-darkestblue;
+  }
+
+  &:disabled { //--disabled если  ссылка
+    background-color: @lighter-grey;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .booking__title {
+    .font(30px; 26px; 700);
+  }
+
+  .booking__button {
+    margin: 0 auto;
+    width: 458px;
+  }
 }

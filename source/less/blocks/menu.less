@@ -1,6 +1,5 @@
 .menu {
-  margin: 0 -18px;
-  background-color: @primary-blue;
+  //background-color: @primary-blue;
 }
 
 .menu__list {
@@ -17,10 +16,24 @@
   align-items: center;
 
   border-bottom: 1px solid @special-darkgrey-2;
-  border-top: 1px solid @special-white-2;
+  border-top: 1px solid @special-grey-2;
+
+  background-color: @primary-blue;
 
   &:last-child {
     box-shadow: inset 0 -7px 7px @special-darkgrey-2;
+  }
+
+  &:hover {
+    background-color: @primary-darkblue;
+  }
+
+  &:active {
+    background-color: @primary-darkestblue;
+
+    & > .menu__link {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -30,4 +43,58 @@
 
   .font(18px; 55px; 700);
   color: @basic-white;
+}
+
+
+@media (min-width: @tablet-width) {
+  .menu {
+    background-color: @basic-white;
+  }
+
+  .menu__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu__item {
+    width: 153px;
+    height: 56px;
+
+    border: none;
+    background-color: @basic-white;
+
+    &:last-child {
+      box-shadow: none;
+    }
+
+    &--right-gap {
+      margin-right: 158px;
+    }
+  }
+
+  .menu__link {
+    .font(14px; 26px; 700);
+    color: @basic-black;
+
+    &:hover {
+      color: @primary-blue;
+    }
+
+    &:active {
+      color: @basic-black;
+      opacity: 0.3;
+    }
+
+    &--active {
+      color: @light-brown;
+    }
+
+    &--active:hover {
+      color: @brown;
+    }
+
+    &--active:active {
+      opacity: 0.6;
+    }
+  }
 }

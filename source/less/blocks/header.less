@@ -1,4 +1,4 @@
-.header > .container {
+.header__navigation {
   position: relative;
 
   display: flex;
@@ -22,5 +22,22 @@
     height: 22px;
 
     background-color: transparent;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .header__logo {
+    margin-top: -60px;
+  }
+
+  .header__toggle {
+    &--open {
+      display: none;
+    }
+  }
+
+  .header__menu {
+    margin: 0;
   }
 }

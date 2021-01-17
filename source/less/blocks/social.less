@@ -1,13 +1,23 @@
 .social {
-  .list-reset();
   display: flex;
-  flex-direction: wrap;
   justify-content: center;
   gap: 6px;
+  padding: 0;
+
+  list-style: none;
 }
 
 .social__link {
-  background-color: @primary-blue;
   width: 47px;
   height: 48px;
+
+  background-color: @primary-blue;
+
+  &:hover {
+    background-color: @primary-darkblue;
+  }
+
+  &:active {
+    background-color: @primary-darkestblue;
+  }
 }
