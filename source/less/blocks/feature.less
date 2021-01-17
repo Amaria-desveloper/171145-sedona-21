@@ -6,6 +6,7 @@
 .feature__headline {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 25px 0;
 
   text-transform: uppercase;
@@ -87,6 +88,10 @@
     padding: 43px 0;
   }
 
+  .feature__description {
+    max-width: 192px;
+  }
+
   .feature--expanded-full {
     display: grid;
     grid-template-columns: repeat(3, 33.3%);
@@ -140,5 +145,11 @@
     & > .feature__detail-list {
       grid-column: 1 / span 3;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feature__description {
+    max-width: 295px;
   }
 }
