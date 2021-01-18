@@ -1,6 +1,8 @@
 .main--form {
+  background-color: @basic-white;
+
   & .main__headline {
-    margin: 20px 0 16px;
+    padding: 20px 0 16px;
   }
 
   & .main__title {
@@ -10,5 +12,26 @@
   & .main__text {
     margin: 28px 0 0;
     line-height: 24px;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .main--form {
+    & .main__headline {
+      margin-bottom: 20px;
+      padding: 68px 166px;
+    }
+
+    & .main__title {
+      margin: 0;
+
+      .font(30px; 26px; 700);
+    }
+
+    & .main__text {
+      margin: 35px 0 0;
+      line-height: 24px;
+    }
   }
 }

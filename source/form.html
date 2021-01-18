@@ -11,21 +11,21 @@
 <body class="page__body">
   <div class="page__body-wrapper">
     <header class="header">
-      <div class="container">
+      <div class="header__navigation">
         <a class="header__logo">
           <img src="https://via.placeholder.com/101x84/491213" width="101" height="84" alt="Логотип City Of Sedona">
         </a>
 
-        <nav class="menu">
+        <nav class="header__menu menu">
           <ul class="menu__list">
             <li class="menu__item">
               <a class="menu__link" href="./index.html">Главная</a>
             </li>
-            <li class="menu__item">
+            <li class="menu__item menu__item--right-gap">
               <a class="menu__link" href="./catalog.html">Фото и видео</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link">Форма отзыва</a>
+              <a class="menu__link menu__link--active">Форма отзыва</a>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#">Htmlacademy</a>
@@ -38,38 +38,34 @@
       </div>
 
       <div class="intro">
-        <img src="https://via.placeholder.com/320x158/DDEAF3" width="320" height="158" alt="">
+        <img src="https://via.placeholder.com/320x389/DDEAF3" width="320" height="389" alt="">
       </div>
     </header>
 
     <main class="main main--form">
-      <div class="container">
-        <div class="main__headline">
-          <h1 class="main__title title">Оставьте свой отзыв</h1>
-          <p class="main__text title title--subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-        </div>
+      <div class="main__headline">
+        <h1 class="main__title title">Оставьте свой отзыв</h1>
+        <p class="main__text title title--subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </div>
 
       <form class="main__feedback feedback" action="https://echo.htmlacademy.ru" method="post" name="feedback">
-        <fieldset class="feedback__fieldset">
-          <div class="container">
-            <h2 class="feedback__title title">Представьтесь:</h2>
+        <fieldset class="feedback__fieldset feedback__fieldset--introduction">
+          <h2 class="feedback__title title">Представьтесь:</h2>
 
-            <label class="feedback__label">
-              <span class="feedback__label-text">Имя*:</span>
-              <input class="feedback__field feedback__field--name" type="text" name="name" placeholder="Петр" required>
-            </label>
+          <label class="feedback__label">
+            <span class="feedback__label-text">Имя*:</span>
+            <input class="feedback__field feedback__field--name" type="text" name="name" placeholder="Петр" required>
+          </label>
 
-            <label class="feedback__label">
-              <span class="feedback__label-text">Фамилия*:</span>
-              <input class="feedback__field feedback__field--surname" type="text" name="surname" placeholder="Иванов" required>
-            </label>
+          <label class="feedback__label">
+            <span class="feedback__label-text">Фамилия*:</span>
+            <input class="feedback__field feedback__field--surname" type="text" name="surname" placeholder="Иванов" required>
+          </label>
 
-            <label class="feedback__label">
-              <span class="feedback__label-text">Отчество:</span>
-              <input class="feedback__field feedback__field--patronymic" type="text" name="patronymic" placeholder="Александрович">
-            </label>
-          </div>
+          <label class="feedback__label">
+            <span class="feedback__label-text">Отчество:</span>
+            <input class="feedback__field feedback__field--patronymic" type="text" name="patronymic" placeholder="Александрович">
+          </label>
         </fieldset>
 
         <fieldset class="feedback__fieldset feedback__fieldset--contacts">
@@ -110,42 +106,36 @@
         </fieldset>
 
         <fieldset class="feedback__fieldset feedback__fieldset--sights">
-          <div class="container">
-            <h2 class="feedback__title title">Посещенные достопримечательности:</h2>
+          <h2 class="feedback__title title">Посещенные достопримечательности:</h2>
 
-            <label class="feedback__label">
-              <input class="feedback__field" name="sight" value="Devils Bridge" type="checkbox" checked>
-              <span class="feedback__label-text">Мост Дьявола</span>
-            </label>
+          <label class="feedback__label">
+            <input class="feedback__field" name="sight" value="Devils Bridge" type="checkbox" checked>
+            <span class="feedback__label-text">Мост Дьявола</span>
+          </label>
 
-            <label class="feedback__label">
-              <input class="feedback__field" name="sight" value="Bell Rock" type="checkbox" checked>
-              <span class="feedback__label-text">Гора-Колокол</span>
-            </label>
+          <label class="feedback__label">
+            <input class="feedback__field" name="sight" value="Bell Rock" type="checkbox" checked>
+            <span class="feedback__label-text">Гора-Колокол</span>
+          </label>
 
-            <label class="feedback__label">
-              <input class="feedback__field" name="sight" value="Slide Park" type="checkbox" checked>
-              <span class="feedback__label-text">Слайд-парк</span>
-            </label>
+          <label class="feedback__label">
+            <input class="feedback__field" name="sight" value="Slide Park" type="checkbox" checked>
+            <span class="feedback__label-text">Слайд-парк</span>
+          </label>
 
-            <label class="feedback__label">
-              <input class="feedback__field" name="sight" value="Red Rock" type="checkbox">
-              <span class="feedback__label-text">Красные скалы</span>
-            </label>
-          </div>
+          <label class="feedback__label">
+            <input class="feedback__field" name="sight" value="Red Rock" type="checkbox">
+            <span class="feedback__label-text">Красные скалы</span>
+          </label>
         </fieldset>
 
         <fieldset class="feedback__fieldset feedback__fieldset--feedback">
-          <div class="container">
-            <h2 class="feedback__title title">Опишите свои эмоции:</h2>
-            <textarea class="feedback__field feedback__field--textarea" name="feedback"
+          <h2 class="feedback__title title">Опишите свои эмоции:</h2>
+          <textarea class="feedback__field" name="feedback"
               placeholder="Опишите подробно все свои эмоции"></textarea>
-          </div>
         </fieldset>
 
-        <div class="container">
-          <button class="feedback__submit" type="submit">Отправить отзыв</button>
-        </div>
+        <button class="feedback__submit" type="submit">Отправить отзыв</button>
       </form>
     </main>
 
