@@ -1,22 +1,23 @@
 .features {
-  padding-top: 25px;
+  padding-top: 35px;
 
   background-color: @basic-white;
 }
 
 .features__headline {
-  margin: 0 auto 27px;
+  margin: 0 auto;
 }
 
 .features__title {
-  margin: 0 0 35px;
-  padding: 0 30px;
+  margin: 0 0 20px;
+  padding: 0 25px;
 }
 
 .features__text {
-  margin-bottom: 11px;
-  padding: 0 20px;
+  margin: 0;
+  padding: 10px 25px;
   line-height: 26px;
+
 }
 
 .features__list {
@@ -24,17 +25,33 @@
 }
 
 .features__item {
+  position: relative;
+
   width: 100%;
+
+  &:first-child::before {
+    content: "";
+    display: block;
+
+    position: absolute;
+    top: 0;
+
+    width: 768px;
+    height: 37px;
+
+    background-image: url(../../img/decorate-triangle.svg);
+    background-repeat: no-repeat;
+  }
 }
 
 
 @media (min-width: @tablet-width) {
   .features__headline {
-    margin: 42px auto 55px;
+    padding: 12px 0 42px;
   }
 
   .features__title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding: 0 100px;
   }
 
@@ -52,11 +69,26 @@
       grid-column: 1 / span 3;
       grid-row-start: 1;
       grid-row-end: 3;
+
+      background-color: @basic-white;
     }
 
     &.feature--expanded-short {
       grid-column: 1 / span 3;
       grid-row: 3 / span 1;
     }
+
+    &:first-child::before {
+      display: none;
+    }
   }
+}
+
+
+@media (min-width: @desktop-width) {
+  .features__headline {
+    padding: 20px 260px 32px;
+  }
+
+
 }

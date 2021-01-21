@@ -3,38 +3,49 @@
 
   display: flex;
   flex-direction: column;
+
+  background-color: @basic-white;
 }
 
 .header__logo {
-  margin: 0 auto;
   order: 2;
-  background-color: @basic-brown;
+  z-index: 1;
+  margin: 0 auto;
 }
 
 .header__toggle {
+  position: absolute;
+  bottom: 35px;
+  right: 20px;
+  transform: translateY(-50%);
+
+  display: block;
+  width: 23px;
+  height: 22px;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+  background-image: url(../../img/icon-menu.svg);
+
+  cursor: pointer;
+
   &--open {
-    position: absolute;
-    top: 18px;
-    right: 18px;
+    top: 5px;
+    transform: translateY(50%);
 
-    display: block;
-    width: 22px;
-    height: 22px;
-
-    background-color: transparent;
+    background-image: url(../../img/icon-cross.svg);
   }
 }
 
 
 @media (min-width: @tablet-width) {
   .header__logo {
-    margin-top: -60px;
+    margin-top: -71px;
   }
 
   .header__toggle {
-    &--open {
       display: none;
-    }
   }
 
   .header__menu {

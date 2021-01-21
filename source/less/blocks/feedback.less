@@ -161,6 +161,10 @@
   background-color: @primary-blue;
 }
 
+.feedback__notion {
+  display: none;
+}
+
 
 @media (min-width: @tablet-width) {
   .feedback {
@@ -259,5 +263,15 @@
     grid-row: 6;
     width: 324px;
     margin-left: 60px;
+  }
+
+  .feedback__notion {
+    grid-column: 2;
+    grid-row: 6;
+    display: block;
+    margin-right: 60px;
+
+    text-align: right;
+    text-transform: uppercase;
   }
 }
