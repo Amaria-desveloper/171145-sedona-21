@@ -1,11 +1,90 @@
 .intro {
-  margin-top: -40px;
+  position: relative;
+
+  height: 389px;
+  margin-top: -30px;
+  padding-top: 90px;
+
   background-color: @light-blue;
+  background-image: url(""../../img/intro-back.jpg"");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-color: contain;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    overflow: hidden;
+
+    width: 1200px;
+    height: 57px;
+
+    background-image: url("../../img/intro-triangle.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--small {
+    height: 157px;
+    padding: 52px 0 0;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/intro-back@2x.jpg");
+  }
+
+  .intro__text {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .intro--small .intro__text {
+    width: 229px;
+    height: 39px;
+  }
 }
 
 
 @media (min-width: @tablet-width) {
   .intro {
     height: 518px;
+    padding-top: 80px;
+
+    &--small {
+      height: 289px;
+      margin-top: -26px;
+      padding-top: 92px;
+    }
+  }
+
+  .intro__text {
+    width: 462px;
+    height: 350px;
+  }
+
+  .intro--small .intro__text {
+    width: 457px;
+    height: 78px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .intro {
+    margin-top: -40px;
+    padding-top: 77px;
+
+    &--small {
+      height: 300px;
+      padding-top: 102px;
+    }
   }
 }

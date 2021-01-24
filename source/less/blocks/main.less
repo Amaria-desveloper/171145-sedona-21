@@ -1,6 +1,10 @@
 .main--form {
+  margin-bottom: 36px;
+
+  background-color: @basic-white;
+
   & .main__headline {
-    margin: 20px 0 16px;
+    padding: 39px 0 16px;
   }
 
   & .main__title {
@@ -10,5 +14,38 @@
   & .main__text {
     margin: 28px 0 0;
     line-height: 24px;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .main--form {
+    margin-bottom: 62px;
+
+    & .main__headline {
+      padding: 65px 166px;
+    }
+
+    & .main__title {
+      margin: 0;
+
+      .font(30px; 26px; 700);
+    }
+
+    & .main__text {
+      margin: 32px 0 0;
+      line-height: 24px;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .main--form {
+    margin-bottom: 68px;
+
+    & .main__headline {
+      padding: 112px 380px 40px;
+    }
   }
 }

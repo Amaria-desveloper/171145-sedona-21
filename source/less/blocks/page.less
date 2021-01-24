@@ -10,22 +10,24 @@
 }
 
 .page__body-wrapper {
-  min-width: 320px;
+  width: 320px;
+  margin: 0 auto;
+
+  overflow: hidden;
+  background-color: @basic-white;
 }
 
 
 @media (min-width: @tablet-width) {
   .page__body-wrapper {
-    min-width: 768px;
-    margin: 0 auto;
+    width: 768px;
   }
 }
 
 
 @media (min-width: @desktop-width) {
   .page__body-wrapper {
-    min-width: 1200px;
-    margin: 0 40px;
+    width: 1200px;
 
     box-shadow: 0 5px 15px @special-darkgrey-2;
   }

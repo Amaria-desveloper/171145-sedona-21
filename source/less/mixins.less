@@ -24,3 +24,26 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.decorative-legend() {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 48%;
+
+    display: block;
+    width: 123px;
+    height: 1px;
+
+    background-color: @grey;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
