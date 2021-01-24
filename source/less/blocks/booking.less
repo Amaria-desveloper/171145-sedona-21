@@ -26,30 +26,8 @@
 }
 
 .booking__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 280px;
-  height: 58px;
-
-  .font(21px; 26px; 700);
-  color: @basic-white;
   text-decoration: none;
-
-  background-color: @primary-blue;
-
-  &:hover {
-    background-color: @primary-darkblue;
-  }
-
-  &:active {
-    color: @special-white-3;
-    background-color: @primary-darkestblue;
-  }
-
-  &:disabled { //--disabled если  ссылка
-    background-color: @lighter-grey;
-  }
+  .button();
 }
 
 
