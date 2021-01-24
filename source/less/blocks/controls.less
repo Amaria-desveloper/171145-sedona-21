@@ -47,8 +47,17 @@
 
   border: none;
   background-color: transparent;
+  color: @blue-grey;
 
   cursor: pointer;
+
+  &:hover {
+    color: @dark-grey;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--replay {
     width: 16px;
@@ -90,6 +99,14 @@
   }
 
   .controls__button {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
     &--replay {
       order: -1;
     }

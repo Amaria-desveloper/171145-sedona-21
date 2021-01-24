@@ -44,7 +44,7 @@
 
 .feature__detail-list {
   .list-reset();
-  padding: 32px 20px 0;
+  padding: 32px 20px;
   text-align: left;
 
   background-color: @basic-white;
@@ -71,7 +71,7 @@
   }
 
   &--housing::before {
-    top: -10px;
+    top: -6px;
     left: 1px;
 
     width: 39px;
@@ -81,7 +81,7 @@
   }
 
   &--gift::before {
-    top: -13px;
+    top: -10px;
     left: 5px;
 
     width: 32px;
@@ -91,7 +91,7 @@
   }
 
     &--food::before {
-    top: -8px;
+    top: -5px;
     left: -2px;
 
     width: 40px;
@@ -103,10 +103,13 @@
 
 .feature__detail-title,
 .feature__detail-text {
-  margin-top: 3px;
+  margin-top: 1px;
   text-align: left;
-}
 
+  &:last-child {
+    margin: 0;
+  }
+}
 
 .feature--expanded-full {
   & .feature__headline {
@@ -145,7 +148,7 @@
   }
 
   .feature__headline {
-    padding: 42px 50px 42px;
+    padding: 42px 30px;
   }
 
   .feature__description {
@@ -180,15 +183,21 @@
     display: grid;
     grid-template-columns: repeat(3, 33.3%);
     align-content: end;
-    padding-top: 158px;
+    padding: 158px 0 60px;
   }
 
   .feature__detail {
     margin: 0;
-    padding: 0 0 46px;
+    padding: 0;
 
     &--housing {
       grid-column: 1;
+
+      padding-left: 3px;
+
+      & .feature__detail-text {
+        padding-left: 1px;
+      }
     }
 
     &--gift {
@@ -205,7 +214,7 @@
       display: block;
 
       position: absolute;
-      top: -100px;
+
       left: 50%;
       transform: translateX(-50%);
 
@@ -214,6 +223,8 @@
     }
 
     &--housing::before {
+      top: -97px;
+
       width: 75px;
       height: 72px;
 
@@ -221,6 +232,8 @@
     }
 
     &--gift::before {
+      top: -100px;
+
       width: 64px;
       height: 75px;
 
@@ -228,6 +241,8 @@
     }
 
       &--food::before {
+      top: -94px;
+
       width: 76px;
       height: 68px;
 
@@ -237,6 +252,7 @@
 
   .feature__detail-title {
     text-align: center;
+    margin-bottom: 23px;
   }
 
   .feature__detail-text {
@@ -249,14 +265,12 @@
 
     & > .feature__headline {
       grid-column: 3 / span 1;
+
+      padding: 44px 45px 0;
     }
 
     & .feature__number {
-      margin: 23px 0 20px;
-    }
-
-    & .feature__title {
-      line-height: 21px;
+      margin: 11px 0 17px;
     }
 
     & > .feature__image {
@@ -285,7 +299,7 @@
     }
   }
 
-  .feature__detail {
-    padding-bottom: 67px;
+  .feature__detail-list {
+    padding-bottom: 81px;
   }
 }
