@@ -1,8 +1,8 @@
 .feedback {
   display: flex;
   flex-direction: column;
-  row-gap: 27px;
-  padding: 0 20px;
+  row-gap: 24px;
+  padding: 0 21px;
 }
 
 .feedback__fieldset {
@@ -56,7 +56,7 @@
 
 .feedback__field {
   height: 58px;
-  padding: 14px 20px;
+  padding: 17px 20px;
 
   font-family: inherit;
   .font(18px; 26px; 700);
@@ -102,6 +102,8 @@
 }
 
 .feedback__fieldset--contacts {
+  margin-bottom: 4px;
+
   & .feedback__title {
     padding-bottom: 16px;
   }
@@ -111,7 +113,7 @@
 
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 14px;
+    margin-bottom: 15px;
 
     &:last-child {
       margin-bottom: 0;
@@ -152,12 +154,13 @@
 }
 
 .feedback__fieldset--impression {
+  margin-bottom: 3px;
+
   & .feedback__label {
     position: relative;
 
     width: 100%;
-    height: 64px;
-    margin-bottom: 5px;
+    margin-bottom: 14px;
 
     &:last-child {
       margin-bottom: 0;
@@ -205,12 +208,13 @@
 
     text-transform: none;
     .font (18px; 26px; 700);
+    color: @basic-black;
   }
 }
 
 .feedback__fieldset--sights {
   & .feedback__title {
-    padding-top: 10px;
+    padding-top: 15px;
   }
 
   & .feedback__field {
@@ -220,7 +224,7 @@
   & .feedback__label {
     width: 100%;
     height: 56px;
-    margin-bottom: 23px;
+    margin-bottom: 25px;
 
     &:last-child {
       margin-bottom: 0;
@@ -257,16 +261,21 @@
 
     text-transform: none;
     .font (18px; 26px; 700);
+    color: @basic-black;
   }
 }
 
 .feedback__fieldset--feedback {
-  margin-bottom: 21px;
+  margin-bottom: 28px;
+
+  & .feedback__title {
+    padding: 19px 0 14px;
+  }
 
   & .feedback__field {
     width: 280px;
     height: 160px;
-    padding: 10px 20px;
+    padding: 15px 19px;
 
     resize: none;
   }
@@ -274,7 +283,7 @@
 
 .feedback__submit {
   margin: 0 auto;
-  padding: 3px 3px 0 0;
+  padding: 6px 6px 0 0;
   border: none;
   .button();
 }
@@ -357,8 +366,8 @@
     & .feedback__title {
       position: relative;
 
-      margin: 0 0 10px;
-      padding: 9px 0;
+      margin: 0 0 8px;
+      padding: 12px 0;
 
       .decorative-legend();
     }
@@ -379,11 +388,11 @@
 
     & .feedback__title {
       text-align: left;
-      margin-bottom: 32px;
+      margin-bottom: 37px;
     }
 
     & .feedback__label {
-      margin-bottom: 14px;
+      margin-bottom: 22px;
     }
 
     & .feedback__label-text {
@@ -394,28 +403,23 @@
   .feedback__fieldset--sights {
     grid-column: 1 / span 2;
     grid-row: 4;
-    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: -15px;
+    justify-content: space-between;
+    padding: 0 70px 0 94px;
 
     & .feedback__title {
-      position: relative;
-
       flex-direction: column;
-      flex-basis: 768px;
-      flex-grow: 1;
-      margin: 0 auto 45px;
-      padding: 0 170px;
+      flex-basis: 100%;
+      margin: 0 0 44px;
+      padding: 0 55px 0 35px;
       .decorative-legend();
     }
 
     & .feedback__label {
-      flex-basis: 220px;
-
-      &:nth-of-type(odd) {
-        margin: 0 40px 33px 96px;
-      }
+      flex-basis: 225px;
+      padding: 0 2px;
+      margin-bottom: 32px;
     }
 
     & .feedback__field {
@@ -427,17 +431,18 @@
     grid-column: 1 / span 2;
     grid-row: 5;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
     & .feedback__title {
       position: relative;
       margin-bottom: 32px;
+      padding-top: 7px;
       .decorative-legend();
     }
 
     & .feedback__field {
       width: 100%;
-      padding-top: 22px;
+      padding: 28px 21px;
     }
   }
 
@@ -446,18 +451,19 @@
     grid-row: 6;
     width: 324px;
     margin-left: 0;
-    padding: 7px 10px 0 0;
+    padding: 0 13px 0 0;
   }
 
   .feedback__notion {
     grid-column: 2;
     grid-row: 6;
     display: block;
-    margin-right: 60px;
-    padding-top: 5px;
+    margin: 0;
+    padding-top: 16px;
 
     text-align: right;
     text-transform: uppercase;
+    line-height: 26px;
   }
 }
 
@@ -470,15 +476,15 @@
   }
 
   .feedback__fieldset--impression {
-    //padding-left: 27px;
+    padding-left: 4px;
 
     & .feedback__title {
-      padding-left: 78px;
+      padding-left: 76px;
     }
   }
 
   .feedback__fieldset--introduction {
-    padding-left: 78px;
+    padding-left: 80px;
 
     & .feedback__field {
       &--name {
@@ -497,7 +503,8 @@
 
   .feedback__fieldset--contacts {
     & .feedback__title {
-      margin-bottom: 60px;
+      margin-bottom: 63px;
+      padding: 8px 0;
     }
 
     & .feedback__label {
@@ -526,40 +533,58 @@
 
     & .feedback__field {
       width: 315px;
-      padding: 18px 23px;
+      padding: 20px 24px 15px;
     }
   }
 
   .feedback__fieldset--sights {
-    padding: 0 0 0 25px;
+    padding: 0;
 
     & .feedback__title {
-      padding: 0 260px;
+      padding: 0 280px;
     }
 
     & .feedback__label {
-      flex-basis: 230px;
+      &:nth-child(3) {
+        padding-left: 15px;
+      }
 
-      &:nth-of-type(odd) {
-        margin: 0;
+      &:nth-child(4) {
+        padding-left: 28px;
+      }
+
+      &:nth-child(5) {
+        padding-left: 20px;
+      }
+    }
+
+    & .feedback__label-text {
+      &--offset {
+        padding: 0 0 0 25px;
       }
     }
   }
 
   .feedback__fieldset--feedback {
+    margin-bottom: 27px;
+
     & .feedback__title {
-      padding: 30px 0;
-      margin-bottom: 20px;
+      padding: 8px 0;
+      margin-bottom: 47px;
+    }
+
+    & .feedback__field {
+      padding: 17px 21px;
     }
   }
 
   .feedback__submit {
     width: 480px;
-    padding: 7px 2px 0 0;
+    padding: 4px 0 0;
   }
 
   .feedback__notion {
-    margin-right: 2px;
-    padding-top: 8px;
+    margin-right: 1px;
+    padding-top: 19px;
   }
 }

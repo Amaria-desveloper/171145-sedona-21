@@ -4,48 +4,55 @@
   background-color: @basic-white;
 
   & .main__headline {
-    padding: 39px 0 16px;
+    padding: 38px 0 19px;
   }
 
   & .main__title {
-    margin: 0;
+    margin: 0 0 27px;
   }
 
   & .main__text {
-    margin: 28px 0 0;
+    margin: 0;
     line-height: 24px;
   }
+}
+
+.main--catalog {
+  margin-bottom: 103px;
 }
 
 
 @media (min-width: @tablet-width) {
   .main--form {
-    margin-bottom: 62px;
+    margin-bottom: 58px;
 
     & .main__headline {
       padding: 65px 166px;
     }
 
     & .main__title {
-      margin: 0;
+      margin-bottom: 33px;
 
       .font(30px; 26px; 700);
     }
+  }
 
-    & .main__text {
-      margin: 32px 0 0;
-      line-height: 24px;
-    }
+  .main--catalog {
+    margin-bottom: 39px;
   }
 }
 
 
 @media (min-width: @desktop-width) {
   .main--form {
-    margin-bottom: 68px;
+    margin-bottom: 65px;
 
     & .main__headline {
       padding: 112px 380px 40px;
     }
+  }
+
+  .main--catalog {
+    margin-bottom: 85px;
   }
 }
