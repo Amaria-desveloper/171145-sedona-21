@@ -1,45 +1,49 @@
 .controls {
   display: flex;
-  flex-wrap: wrap;
   width: 280px;
-  height: 111px;
+  height: 113px;
   padding: 0 23px 0;
-  background-image: linear-gradient(@special-black-6 45px, @grey 45px);
+  background-image: linear-gradient(@special-black-6 47px, @grey 47px);
 }
 
 .controls__progress-wrapper {
   width: 280px;
-  height: 45px;
-  padding: 0;
+  height: 42px;
+  padding: 23px 0 0 0;
 }
 
 .controls__progress {
-  appearance: none;
+  position: relative;
+
   width: 235px;
-  height: 45px;
   margin: 0;
+}
 
-  background-color: transparent;
+.controls__track {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 235px;
+  height: 3px;
 
-  &::-webkit-slider-thumb {
-    appearance: none;
+  background-color: @special-white-2;
+}
 
-    width: 9px;
-    height: 9px;
-    margin-top: -3px;
+.controls__thumb {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 
-    border: none;
-    border-radius: 50%;
-    background-color: @basic-white;
+  width: 9px;
+  height: 9px;
+  margin: 0 0 0 35px;
+  padding: 0;
 
-    cursor: pointer;
-  }
+  border: none;
+  border-radius: 50%;
+  background-color: @basic-white;
 
-  &::-webkit-slider-runnable-track {
-    height: 3px;
-
-    background-color: @special-grey-2;
-  }
+  cursor: pointer;
 }
 
 .controls__button {
@@ -64,20 +68,20 @@
     width: 16px;
     margin: 0 auto 0 2px;
 
-    background-image: url("../../img/replay.svg");
+    background-image: url("../img/replay.svg");
   }
 
   &--subtitles {
     width: 32px;
     margin-right: 31px;
 
-    background-image: url("../../img/subtitles.svg");
+    background-image: url("../img/subtitles.svg");
   }
 
   &--fullscreen {
     width: 20px;
 
-    background-image: url("../../img/fullscreen.svg");
+    background-image: url("../img/fullscreen.svg");
   }
 }
 
@@ -86,25 +90,28 @@
   .controls {
     width: 648px;
     height: 93px;
-    padding: 36px 33px;
+    padding: 35px;
 
     background-image: none;
     background-color: @special-black-6;
   }
 
   .controls__progress-wrapper {
-    width: 390px;
-    height: 20px;
+    width: 389px;
     margin: 0 42px;
+    padding: 10px 0;
   }
 
   .controls__progress {
-    width: 390px;
-    height: 20px;
+    width: 389px;
+  }
 
-    &::-webkit-slider-thumb {
-      margin-left: 58px;
-    }
+  .controls__track {
+    width: 389px;
+  }
+
+  .controls__thumb {
+    margin: 0 0 0 112px;
   }
 
   .controls__button--replay {
@@ -135,9 +142,9 @@
 
   .controls__progress {
     width: 540px;
+  }
 
-    &::-webkit-slider-thumb {
-      margin-left: 34px;
-    }
+  .controls__track {
+    width: 540px;
   }
 }

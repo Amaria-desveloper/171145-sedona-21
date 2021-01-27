@@ -48,7 +48,7 @@
 
 .feedback__label-text {
   vertical-align: middle;
-  padding-right: 16px;
+  padding-right: 11px;
 
   .font(14px; 26px; 400);
   text-transform: uppercase;
@@ -62,7 +62,7 @@
   .font(18px; 26px; 700);
   color: @basic-black;
 
-  border: none;
+  border: 4px solid transparent;
   background-color: @grey;
 
   &:hover {
@@ -145,11 +145,11 @@
   }
 
   & .feedback__label--phone::after {
-    background-image: url("../../img/phone.svg");
+    background-image: url("../img/phone.svg");
   }
 
   & .feedback__label--mail::after {
-    background-image: url("../../img/mail.svg");
+    background-image: url("../img/mail.svg");
   }
 }
 
@@ -241,7 +241,7 @@
     }
 
     &--checked::before {
-      background-image: url("../../img/tick.svg");
+      background-image: url("../img/tick.svg");
       background-repeat: no-repeat;
       background-position: 50% 50%;
     }
@@ -277,6 +277,7 @@
     height: 160px;
     padding: 15px 19px;
 
+    border: none;
     resize: none;
   }
 }
@@ -431,18 +432,18 @@
     grid-column: 1 / span 2;
     grid-row: 5;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 31px;
 
     & .feedback__title {
       position: relative;
-      margin-bottom: 32px;
+      margin-bottom: 40px;
       padding-top: 7px;
       .decorative-legend();
     }
 
     & .feedback__field {
       width: 100%;
-      padding: 28px 21px;
+      padding: 20px 21px;
     }
   }
 
@@ -542,6 +543,11 @@
 
     & .feedback__title {
       padding: 0 280px;
+
+      &::before,
+      &::after {
+        top: 15%;
+      }
     }
 
     & .feedback__label {

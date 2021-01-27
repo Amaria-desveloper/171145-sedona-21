@@ -37,6 +37,10 @@
     height: 1px;
 
     background-color: @grey;
+
+    @media (min-width: @desktop-width) {
+      width: 280px;
+    }
   }
 
   &::before {
@@ -50,10 +54,11 @@
 
 .button() {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: 280px;
-  height: 58px;
+  min-height: 58px;
 
   text-transform: uppercase;
   font-family: "ptsans", "Arial", sans-serif;
