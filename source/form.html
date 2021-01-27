@@ -121,18 +121,18 @@
         <fieldset class="feedback__fieldset feedback__fieldset--impression">
           <h2 class="feedback__title title">Ваше общее впечатление:</h2>
 
-          <label class="feedback__label feedback__label--checked">
-            <input class="feedback__field feedback__field--hidden" name="impression" value="positive" type="radio" checked>
+          <input class="feedback__field feedback__field--hidden" id="positive" name="impression" value="positive" type="radio" checked>
+          <label class="feedback__label feedback__label--checked" for="positive">
             <span class="feedback__label-text">Скорее положительное</span>
           </label>
 
-          <label class="feedback__label">
-            <input class="feedback__field feedback__field--hidden" name="impression" value="negative" type="radio">
+          <input class="feedback__field feedback__field--hidden" id="negative" name="impression" value="negative" type="radio">
+          <label class="feedback__label" for="negative">
             <span class="feedback__label-text">Скорее отрицательное</span>
           </label>
 
+          <input class="feedback__field feedback__field--hidden" id="unsure" name="impression" value="unsure" type="radio">
           <label class="feedback__label">
-            <input class="feedback__field feedback__field--hidden" name="impression" value="unsure" type="radio">
             <span class="feedback__label-text">Затрудняюсь ответить</span>
           </label>
         </fieldset>
@@ -140,23 +140,23 @@
         <fieldset class="feedback__fieldset feedback__fieldset--sights">
           <h2 class="feedback__title title">Посещенные достопримечательности:</h2>
 
-          <label class="feedback__label feedback__label--checked">
-            <input class="feedback__field" name="sight" value="Devils Bridge" type="checkbox" checked>
+          <input class="feedback__field feedback__field--hidden" id="devils-bridge" name="sight" value="Devils Bridge" type="checkbox" checked>
+          <label class="feedback__label feedback__label--checked" for="devils-bridge">
             <span class="feedback__label-text">Мост Дьявола</span>
           </label>
 
-          <label class="feedback__label feedback__label--checked">
-            <input class="feedback__field" name="sight" value="Bell Rock" type="checkbox" checked>
+          <input class="feedback__field feedback__field--hidden" id="bell-rock" name="sight" value="Bell Rock" type="checkbox" checked>
+          <label class="feedback__label feedback__label--checked" for="bell-rock">
             <span class="feedback__label-text">Гора-Колокол</span>
           </label>
 
-          <label class="feedback__label feedback__label--checked">
-            <input class="feedback__field" name="sight" value="Slide Park" type="checkbox" checked>
+          <input class="feedback__field feedback__field--hidden" id="slide-park" name="sight" value="Slide Park" type="checkbox" checked>
+          <label class="feedback__label feedback__label--checked" for="slide-park">
             <span class="feedback__label-text">Слайд-парк</span>
           </label>
 
-          <label class="feedback__label">
-            <input class="feedback__field" name="sight" value="Red Rock" type="checkbox">
+          <input class="feedback__field feedback__field--hidden" id="red-rock" name="sight" value="Red Rock" type="checkbox">
+          <label class="feedback__label" for="red-rock">
             <span class="feedback__label-text feedback__label-text--offset">Красные скалы</span>
           </label>
         </fieldset>

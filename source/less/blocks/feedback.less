@@ -210,15 +210,15 @@
     .font (18px; 26px; 700);
     color: @basic-black;
   }
+
+  .feedback__field--hidden:focus + .feedback__label::before {
+    background-color: @lighter-grey;
+  }
 }
 
 .feedback__fieldset--sights {
   & .feedback__title {
     padding-top: 15px;
-  }
-
-  & .feedback__field {
-    .visually-hidden();
   }
 
   & .feedback__label {
@@ -262,6 +262,10 @@
     text-transform: none;
     .font (18px; 26px; 700);
     color: @basic-black;
+  }
+
+  .feedback__field--hidden:focus + .feedback__label::before {
+    background-color: @lighter-grey;
   }
 }
 
